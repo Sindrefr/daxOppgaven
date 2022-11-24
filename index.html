@@ -1,40 +1,41 @@
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daxoppgave</title>
-    <script src="bundle.js" defer></script>
-    <link rel="stylesheet" href= "./signin.css">
-    <script src="./src/numbers.js" defer></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daxoppgave</title>
+  <link rel="stylesheet" href="./signin.css">
+  
+  
+    <!-- import core firebase functionality -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js" defer></script>
+    <!-- import firestore functinality-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js" defer></script>
+    <!-- initiate firebase with config and all that -->
+    <script src="./src/firebaseInit.js" defer></script>
+    <!-- implement firebase firestore on the website -->    
+    <script src="./src/index.js" defer></script>
+
 </head>
+
 <body>
-    <div class="row">
-    <form class="signup">
-        <label for="username">username:</label>
-        <input type="text"name="name" required>
-        <label for="password">password:</label>
-        <input type="password" name="password" required>
-        <button>signup</button>
-      </form>
-      
-      <form class="login">
-        <label for="username">username:</label>
-        <input type="text"name="username">
-        <label for="password">password:</label>
-        <input type="password" name="password">
-        <button>login</button>
-      </form>
-    </div>
+  <section class="row">
+    <form id="form">
+      <h1>Sign in to enter!</h1>
+      <input type="username" name="username" id="email" placeholder="your email here" required>
+      <input type="password" name="password" id="password" placeholder="your password here" required>
+      <p class="hidden" name="feedback" id="feedback"></p>
+    </form>
 
-  <div class="wrapper counter">
-    <span class="minus">-</span>
-    <span class="num">01</span>
-    <span class="plus">+</span>
-  </div>
+    <section class="wrapper hidden" id="countersection">
+      <span class="minus">-</span>
+      <span class="num">01</span>
+      <span class="plus">+</span>
+      <a id="logout">Log out</a>
+      </div>
+    </section>
+  </section>
 
 </body>
-</html>
 
-</body>
 </html>
